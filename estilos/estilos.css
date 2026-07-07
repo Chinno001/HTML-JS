@@ -1,0 +1,38 @@
+div {
+    padding: 15px;
+}
+
+#primerDiv {
+    margin: auto;
+}
+
+.divFlex {
+    display: flex;
+}
+
+.ancho30 {
+    width: 30%;
+}
+
+.ancho70 {
+    width: 70%;
+}
+
+.ancho33 {
+    width: 33%;
+}
+
+#imagenSuperior {
+    margin: auto;
+    width: 80%;
+    border-radius: 50%;
+}
+
+button{
+    padding: 15px;
+    background-color: blue;
+    color: aliceblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    border: solid 2px #A6A09B;
+}

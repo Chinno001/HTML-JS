@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de JavaScript</title>
+
+    <link rel="shortcut icon" href="./assets/images/download.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./estilos/brite.css">
+    <link rel="stylesheet" href="./estilos/estilosSitio.css">
+
+    <script src="./scripts/bootstrap.js"></script>
+    <script src="./scripts/formulario.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="light">
+        <a class="navbar-brand" href="#">Inicio JS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./iniciojs.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./formulario.html">Formulario de Registro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://portal.inacap.cl">Inacap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.google.com">Google</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h3">Formulario Registro</p>
+            </div>
+        </div>
+        <br>
+
+        <form id="formularioRegistro">
+            <div class="row">
+                <div class="col">
+                    <label for="inputNombre" class="form-label">Nombre Completo:</label>
+                    <input type="text" name="nombreUsuario" id="inputNombre" placeholder="Nombre completo..."
+                        class="form-control" onchange="validarInput(this);">
+                    <div class="alert alert-danger" role="alert" id="alertaNombre"></div>
+                </div>
+
+                <div class="col">
+                    <label for="inputEmail" class="form-label">Correo:</label>
+                    <input type="text" name="emailUsuario" id="inputEmail" placeholder="correo electrónico usuario..."
+                        class="form-control" onchange="validarEmail(this);">
+                    <div class="alert alert-danger" role="alert" id="alertaEmail"></div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <label for="inputRut" class="form-label">RUT:</label>
+                    <input type="text" name="rutUsuario" id="inputRut" placeholder="12.345.678-9"
+                        class="form-control" onchange="validarRutInput(this);">
+                    <div class="alert alert-danger" role="alert" id="alertaRut"></div>
+                </div>
+
+                <div class="col">
+                    <label for="inputFechaNacimiento" class="form-label">Fecha Nacimiento:</label>
+                    <input type="date" name="contrasenaUsuario" id="inputFechaNacimiento" class="form-control">
+                    <div class="alert alert-danger" role="alert" id="alertaFechaNacimiento"></div>
+                </div>
+
+                <div class="col">
+                    <label for="selectGenero" class="form-label">Género:</label>
+                    <select name="generoUsuario" id="selectGenero" class="form-select">
+                        <option value="" selected>Seleccione su opción</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                        <option value="O">Otro...</option>
+                    </select>
+                    <div class="alert alert-danger" role="alert" id="alertaGenero"></div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-8">
+                    <label for="inputDireccion" class="form-label">Dirección:</label>
+                    <input type="text" name="direccionUsuario" id="inputDireccion" placeholder="Dirección usuario..."
+                        class="form-control">
+                    <div class="alert alert-danger" role="alert" id="alertaDireccion"></div>
+                </div>
+
+                <div class="col-4">
+                    <label for="selectNacionalidad" class="form-label">Nacionalidad:</label>
+                    <select name="nacionalidadUsuario" id="selectNacionalidad" class="form-select">
+                        <option value="" selected>Seleccione su opción</option>
+                        <option value="56">Chilena</option>
+                        <option value="51">Peruana</option>
+                        <option value="58">Venezolana</option>
+                        <option value="591">Boliviana</option>
+                    </select>
+                    <div class="alert alert-danger" role="alert" id="alertaNacionalidad"></div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <label for="inputFoto" class="form-label">Foto Personal:</label>
+                    <input type="file" name="direccionUsuario" id="inputFoto" class="form-control"
+                        onchange="validarFoto(this);">
+                    <div class="alert alert-danger" role="alert" id="alertaFoto"></div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <label for="inputContrasena" class="form-label">Contraseña:</label>
+                    <input type="password" name="contrasenaUsuario" id="inputContrasena" class="form-control">
+                    <div class="alert alert-danger" role="alert" id="alertaContrasena"></div>
+                </div>
+
+                <div class="col">
+                    <label for="inputRepetirContrasena" class="form-label">Repetir Contraseña:</label>
+                    <input type="password" name="repContrasenaUsuario" id="inputRepetirContrasena" class="form-control">
+                    <div class="alert alert-danger" role="alert" id="alertaRepetirContrasena"></div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary me-2"
+                        onclick="limpiarFormulario();">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="validarFormulario();">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

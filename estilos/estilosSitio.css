@@ -1,0 +1,9 @@
+.navbar{
+    margin-bottom: 20px;
+}
+
+.alerta{
+    background-color: rgb(234, 207, 225);
+    border: red solid 2px;
+    color: red;
+}
