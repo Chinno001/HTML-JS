@@ -1,5 +1,5 @@
 window.onload = function(){
-    const formulario = document.getElementById('formularioRegistro');
+    const formulario = $('#formularioRegistro');
     const elementosAlerta = formulario.querySelectorAll('.alert');
 
     elementosAlerta.forEach((elemento) => {
@@ -8,18 +8,18 @@ window.onload = function(){
 };
 
 function validarFormulario() {
-    const inputNombre = document.getElementById('inputNombre');
-    const inputEmail = document.getElementById('inputEmail');
-    const inputRut = document.getElementById('inputRut');
-    const inputFechaNacimiento = document.getElementById('inputFechaNacimiento');
-    const selectGenero = document.getElementById('selectGenero');
-    const inputDireccion = document.getElementById('inputDireccion');
-    const selectNacionalidad = document.getElementById('selectNacionalidad');
-    const inputFoto = document.getElementById('inputFoto');
-    const inputContrasena = document.getElementById('inputContrasena');
-    const inputRepetirContrasena = document.getElementById('inputRepetirContrasena');
+    const inputNombre = $('#inputNombre');
+    const inputEmail = $('#inputEmail');
+    const inputRut = $('#inputRut');
+    const inputFechaNacimiento = $('#inputFechaNacimiento');
+    const selectGenero = $('#selectGenero');
+    const inputDireccion = $('#inputDireccion');
+    const selectNacionalidad = $('#selectNacionalidad');
+    const inputFoto = $('#inputFoto');
+    const inputContrasena = $('#inputContrasena');
+    const inputRepetirContrasena = $('#inputRepetirContrasena');
 
-    const alertaNombre = document.getElementById('alertaNombre');
+    const alertaNombre = $('#alertaNombre');
     let formularioValido = true;
 
     if (!validarInput(inputNombre)) {
