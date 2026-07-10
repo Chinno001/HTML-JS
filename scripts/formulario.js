@@ -264,7 +264,7 @@ class RutValidator {
 }
 
 //Se solucionó el problema de validación de Rut usando la herramienta de desarrollador en microsoft edge
-//y se revisó linea por linea el código, se encontró que la función limpiar estaba
+//y se revisó linea por linea el código, se encontró que la función limpiar no estaba retornando el valor esperado, se corrigió la función limpiar y ahora valida correctamente el RUT ingresado en el formulario.
 
 function validarRutInput(input) {
     if (validarInput(input)) { // Primero verifica que no esté vacío
